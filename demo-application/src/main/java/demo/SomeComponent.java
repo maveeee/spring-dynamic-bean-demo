@@ -15,6 +15,8 @@ public class SomeComponent {
     public SomeComponent(@Autowired(required = false) DynamicBean1 dynamicBean) {
         if(dynamicBean == null){
             System.out.println("Dynamic Bean is null");
+        } else {
+            System.out.println("=== Found dynamic bean! It is returning: " + dynamicBean.returnSomething() + " ===");
         }
         this.dynamicBean = dynamicBean;
     }

@@ -21,10 +21,10 @@ public class Application {
     @Bean
     public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
         return args -> {
-            DynamicBean1 x = ctx.getBean(DynamicBean1.class);
+            DynamicBean1 x = ctx.getBean("dynamicBean1", DynamicBean1.class);
 
             if(x != null) {
-                System.out.println("But now we can resolve DynamicBean1");
+                System.out.println("But now we can resolve DynamicBean1 and it is returning: " + x.returnSomething());
             }
             else {
                 throw new RuntimeException();
