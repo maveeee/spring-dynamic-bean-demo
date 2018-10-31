@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'demo'
+version '1.0'
+
+sourceCompatibility = 1.10
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    springBootVersion = '1.5.10.RELEASE'
+}
+
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: springBootVersion
+    compile group: 'org.springframework.boot', name: 'spring-boot-autoconfigure', version: springBootVersion
+    compile group: 'org.springframework.boot', name: 'spring-boot-configuration-processor', version: springBootVersion
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
