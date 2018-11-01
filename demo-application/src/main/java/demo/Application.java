@@ -29,9 +29,10 @@ public class Application {
             else {
                 throw new RuntimeException();
             }
+
+            var beans = ctx.getBean(DynamicBean1.class);
         };
     }
-
 
     // Just to visualize the bean creation order
     @Bean
